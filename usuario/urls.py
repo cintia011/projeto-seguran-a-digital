@@ -1,17 +1,8 @@
-from django.contrib import admin
+from django.urls import path
 from . import views
 
-
-
-
-
 urlpatterns = [
-    path('listar_usuarios/', views.listar_usuarios, name='listar_usuarios'),
-    
+    path('criar/', views.criar_usuario, name='criar_usuario'),
+    path('perfil/<int:id>/', views.exibir_usuario, name='exibir_usuario'),
+    path('login/', views.login_usuario, name='login'),
 ]
-
-
-
-
-
-
